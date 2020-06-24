@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="642.0" prefWidth="991.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.view.DataOverviewController">
+   <children>
+      <VBox prefHeight="406.0" prefWidth="938.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <SplitPane dividerPositions="0.2" focusTraversable="true" prefHeight="1078.0" prefWidth="1920.0">
+               <items>
+                  <AnchorPane fx:id="treePane" maxWidth="230.0" minWidth="230.0" prefWidth="230.0">
+                     <children>
+                        <TreeView fx:id="treeMenu" layoutX="14.0" layoutY="50.0" prefHeight="618.0" prefWidth="262.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                  <BorderPane fx:id="dataPane" prefHeight="200.0" prefWidth="200.0" />
+               </items>
+            </SplitPane>
+            <HBox id="HBox" alignment="CENTER_LEFT" maxHeight="78.0" prefHeight="78.0" prefWidth="1920.0" spacing="5.0">
+               <children>
+                  <Label fx:id="labelLeftStatus" maxWidth="-1.0" text="Info" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="11.0" fx:id="x3" />
+                     </font>
+                     <textFill>
+                        <Color blue="0.625" green="0.625" red="0.625" fx:id="x4" />
+                     </textFill>
+                  </Label>
+                  <Pane fx:id="paneCenterStatus" prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
+                  <Label fx:id="labelRightStatus" font="$x3" maxWidth="-1.0" text="Right status" textFill="$x4" HBox.hgrow="NEVER" />
+               </children>
+               <padding>
+                  <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

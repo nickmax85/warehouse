@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane style="-fx-border: 12;" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.view.EditController">
+   <children>
+      <VBox layoutX="14.0" layoutY="31.0" prefHeight="482.0" prefWidth="464.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Label styleClass="header" text="Datenbank" />
+            <TableView fx:id="articleFilterDBTable">
+               <columns>
+                  <TableColumn fx:id="nrFilterDBColumn" prefWidth="266.0" text="Artikelnummer" />
+                  <TableColumn fx:id="timestampFilterDBColumn" prefWidth="182.0" text="Zeitstempel" />
+               </columns>
+            </TableView>
+            <HBox nodeOrientation="RIGHT_TO_LEFT" spacing="10.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleDelete" prefHeight="34.0" prefWidth="117.0" text="%delete" />
+                  <Button mnemonicParsing="false" onAction="#exportToCSV" prefHeight="34.0" prefWidth="128.0" text="%export" />
+                  <Button mnemonicParsing="false" onAction="#handleGetArticles" prefHeight="34.0" prefWidth="117.0" text="%load" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <opaqueInsets>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </opaqueInsets>
+</AnchorPane>

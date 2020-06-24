@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.view.HomeScreenController">
+   <top>
+      <BorderPane BorderPane.alignment="CENTER">
+         <center>
+            <Label style="-fx-font-size: 60;" text="Warehouse" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </Label>
+         </center>
+      </BorderPane>
+   </top>
+   <bottom>
+      <BorderPane BorderPane.alignment="CENTER">
+         <right>
+            <Label text="Idee&#10;Bernhard Potzinger&#10;&#10;Entwickler&#10;Markus Thaler&#10;" wrapText="true" BorderPane.alignment="CENTER" />
+         </right>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </BorderPane>
+   </bottom>
+   <center>
+      <Label BorderPane.alignment="CENTER">
+         <graphic>
+            <ImageView fitHeight="252.0" fitWidth="380.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resource/icons/home128.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+   </center>
+</BorderPane>

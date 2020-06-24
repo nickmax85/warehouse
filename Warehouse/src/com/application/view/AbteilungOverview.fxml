@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import jfxtras.labs.scene.control.*?>
+
+<SplitPane dividerPositions="0.5" prefHeight="560.0" prefWidth="955.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.view.AbteilungOverviewController">
+   <items>
+  <AnchorPane>
+    <children>
+      <TableView fx:id="table" layoutX="12.0" layoutY="47.0" prefHeight="465.0" prefWidth="449.0" tableMenuButtonVisible="false">
+        <columns>
+          <TableColumn fx:id="nameColumn" maxWidth="5000.0" minWidth="10.0" prefWidth="443.0" text="Name" />
+        </columns>
+      </TableView>
+            <Label layoutX="14.0" layoutY="14.0" text="Abteilungen" />
+    </children>
+  </AnchorPane>
+  <AnchorPane styleClass="background">
+    <children>
+      <GridPane layoutX="14.0" layoutY="48.0">
+        <children>
+          <Label prefHeight="21.0" prefWidth="124.0" text="Name" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+          <Label fx:id="nameLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        </children>
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="149.0" minWidth="10.0" prefWidth="122.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="231.0" minWidth="10.0" prefWidth="177.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <Label layoutX="14.0" layoutY="14.0" text="Details" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+      <HBox id="HBox" alignment="CENTER" layoutX="208.0" layoutY="513.0" prefWidth="250.0" spacing="5.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="15.0">
+        <children>
+          <Button id="" defaultButton="true" mnemonicParsing="false" onAction="#handleNew" text="%new" />
+          <Button mnemonicParsing="false" onAction="#handleEdit" text="%edit" />
+          <Button mnemonicParsing="false" onAction="#handleDelete" text="%remove" />
+        </children>
+      </HBox>
+    </children>
+  </AnchorPane>
+   </items>
+</SplitPane>

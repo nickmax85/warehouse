@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="781.0" prefWidth="1262.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.warehouse.view.EditController">
+   <children>
+      <TableView fx:id="articleFilterDBTable" layoutX="53.0" layoutY="121.0" prefHeight="515.0" prefWidth="449.0">
+         <columns>
+            <TableColumn fx:id="nrFilterDBColumn" prefWidth="266.0" text="Artikelnummer" />
+            <TableColumn fx:id="timestampFilterDBColumn" prefWidth="182.0" text="Zeitstempel" />
+         </columns>
+      </TableView>
+      <Button layoutX="372.0" layoutY="74.0" mnemonicParsing="false" onAction="#handleGetArticles" prefHeight="34.0" prefWidth="117.0" text="%load">
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resource/icon/database48.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Label layoutX="53.0" layoutY="49.0" styleClass="header" text="Datenbank" />
+      <Button layoutX="372.0" layoutY="649.0" mnemonicParsing="false" onAction="#exportToCSV" prefHeight="34.0" prefWidth="128.0" text="Export">
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resource/icon/csv48.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button layoutX="224.0" layoutY="649.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="34.0" prefWidth="117.0" text="Entfernen" />
+   </children>
+</AnchorPane>

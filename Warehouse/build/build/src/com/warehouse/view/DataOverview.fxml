@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="821.0" prefWidth="1282.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.warehouse.view.DataOverviewController">
+   <children>
+      <AnchorPane layoutX="746.0" layoutY="14.0" prefHeight="748.0" prefWidth="451.0">
+         <children>
+            <TableView fx:id="articleFilterDBTable" layoutX="14.0" layoutY="95.0" prefHeight="583.0" prefWidth="432.0">
+               <columns>
+                  <TableColumn fx:id="nrFilterDBColumn" prefWidth="255.0" text="Artikelnummer" />
+                  <TableColumn fx:id="cntFilterDBColumn" prefWidth="176.0" text="Anzahl" />
+               </columns>
+            </TableView>
+            <Button layoutX="315.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleGetArticles" prefHeight="34.0" prefWidth="117.0" text="%load">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resource/icon/database48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label layoutX="14.0" layoutY="4.0" text="Suche in Datenbank" />
+            <Button layoutX="315.0" layoutY="687.0" mnemonicParsing="false" onAction="#exportToCSV" prefHeight="34.0" prefWidth="128.0" text="Export">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resource/icon/csv48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <DatePicker fx:id="startDate" layoutX="14.0" layoutY="54.0" prefHeight="31.0" prefWidth="140.0" promptText="von" />
+            <DatePicker fx:id="endDate" layoutX="163.0" layoutY="54.0" prefHeight="31.0" prefWidth="140.0" promptText="bis" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="65.0" layoutY="14.0" prefHeight="700.0" prefWidth="506.0">
+         <children>
+            <TextField fx:id="nrTextField" layoutX="14.0" layoutY="46.0" onKeyPressed="#handleNew" prefHeight="31.0" prefWidth="404.0" promptText="Artikelnummer" />
+            <TableView fx:id="articleScanTable" layoutX="14.0" layoutY="89.0" prefHeight="583.0" prefWidth="404.0">
+              <columns>
+                <TableColumn fx:id="nrScanColumn" prefWidth="272.0" text="Artikelnummer" />
+                <TableColumn fx:id="cntScanColumn" minWidth="0.0" prefWidth="131.0" text="Anzahl" />
+              </columns>
+            </TableView>
+            <Label layoutX="14.0" layoutY="4.0" text="Gespeicherte Daten" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

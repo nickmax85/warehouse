@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Warehouse.jnlp">
+  <information>
+    <title>Warehouse</title>
+    <vendor>Markus Thaler</vendor>
+    <description>Warehouse</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Warehouse.jar" size="55200" download="eager" />
+    <jar href="libs\log4j-1.2.17.jar" size="489883" download="eager" />
+    <jar href="libs\mysql-connector-java-5.1.20-bin.jar" size="802721" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="0" height="0" main-class="com.warehouse.Main"  name="Warehouse" />
+  <update check="background"/>
+</jnlp>
