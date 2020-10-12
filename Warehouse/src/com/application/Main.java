@@ -50,7 +50,9 @@ public class Main extends Application {
 
 		PropertyConfigurator.configure(getClass().getClassLoader().getResource("log4j.properties"));
 		ApplicationProperties.configure("application.properties", installPath, "application.properties");
+			
 		ApplicationProperties.getInstance().setup();
+		ApplicationProperties.getInstance().edit("db_host", "localhost");
 
 		this.primaryStage
 				.setMaximized(ApplicationProperties.getInstance().getProperty("start_maximized").contains("true"));
