@@ -52,7 +52,7 @@ public class Main extends Application {
 		ApplicationProperties.configure("application.properties", installPath, "application.properties");
 			
 		ApplicationProperties.getInstance().setup();
-		ApplicationProperties.getInstance().edit("db_host", "localhost");
+		ApplicationProperties.getInstance().edit("db_host", "ilzmsih01.prodln01.net");
 
 		this.primaryStage
 				.setMaximized(ApplicationProperties.getInstance().getProperty("start_maximized").contains("true"));
